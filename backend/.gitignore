@@ -1,0 +1,46 @@
+
+.nyc_output/
+coverage/
+# Coverage reports
+
+*.swp
+.idea/
+.vscode/
+# IDE files
+
+build/
+dist/
+# Build output
+
+Thumbs.db
+.DS_Store
+# OS generated files
+
+*.log
+logs/
+# Logs
+
+.env.*
+.env
+# Environment variables
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+/node_modules
+
+# TypeScript build output
+/dist
+
+# OS generated files
+.DS_Store
+
+# Test coverage
+/coverage
+
+yarn-error.log*
+yarn-debug.log*
+npm-debug.log*
+node_modules/# Node.js dependencies
