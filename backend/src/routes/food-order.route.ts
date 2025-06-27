@@ -6,12 +6,12 @@ import {
   deleteFoodOrder,
   getFoodOrderById,
 } from "../controllers/food-order.controller.js";
-const foodRouter = express.Router();
+const foodOrderRouter = express.Router();
 
-foodRouter.get("/", getAllFoodOrders);
-foodRouter.post("/", createFoodOrder);
-foodRouter.patch("/:foodOrderId", updateFoodOrder);
-foodRouter.delete("/:foodOrderId", deleteFoodOrder);
-foodRouter.get("/:foodOrderId", getFoodOrderById);
+foodOrderRouter.get("/", getAllFoodOrders);
+foodOrderRouter.post("/", createFoodOrder);
+foodOrderRouter.patch("/:foodOrderId", updateFoodOrder);
+foodOrderRouter.delete("/:foodOrderId", deleteFoodOrder);
+foodOrderRouter.get("/:foodOrderId", getFoodOrderById);
 
-export default foodRouter;
+export default foodOrderRouter;

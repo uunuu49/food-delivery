@@ -4,6 +4,7 @@ const { Schema, model } = mongoose;
 const user = new Schema({
   email: {
     type: String,
+    required: true,
   },
   password: {
     type: String,
@@ -24,12 +25,12 @@ const user = new Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now,
+    default: Date,
   },
   updatedAt: {
     type: Date,
-    default: Date.now,
+    default: Date,
   },
 });
 
-export const User = model("User ", user);
+export const User = model("User", user);

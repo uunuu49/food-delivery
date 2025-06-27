@@ -7,12 +7,12 @@ import {
   createFoodCategory,
 } from "../controllers/food-category.controller.js";
 
-const foodRouter = express.Router();
+const foodCategoryRouter = express.Router();
 
-foodRouter.get("/", getAllFoodCategory);
-foodRouter.post("/", createFoodCategory);
-foodRouter.patch("/:foodCategoryId", updateFoodCategory);
-foodRouter.delete("/:foodCategoryId", deleteFoodCategory);
-foodRouter.get("/:foodCategoryId", getFoodCategoryById);
+foodCategoryRouter.get("/", getAllFoodCategory);
+foodCategoryRouter.post("/", createFoodCategory);
+foodCategoryRouter.patch("/:foodCategoryId", updateFoodCategory);
+foodCategoryRouter.delete("/:foodCategoryId", deleteFoodCategory);
+foodCategoryRouter.get("/:foodCategoryId", getFoodCategoryById);
 
-export default foodRouter;
+export default foodCategoryRouter;

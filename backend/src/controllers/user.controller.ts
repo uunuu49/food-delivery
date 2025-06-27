@@ -46,38 +46,3 @@ export const createUser = async (request: Request, response: Response) => {
     });
   }
 };
-export const updateUser = async (request: Request, response: Response) => {
-  try {
-    const { userId } = request.params;
-    const updateUser = request.body;
-
-    const user = await User.findByIdAndUpdate(userId, updateUser, {
-      new: true,
-    });
-
-    response.json({
-      success: true,
-      data: user,
-    });
-  } catch (error) {
-    response.status(444).json({
-      success: false,
-      error: error,
-    });
-  }
-};
-export const deleteUser = async (request: Request, response: Response) => {
-  try {
-    const { userId } = request.params;
-    await User.findByIdAndDelete(userId);
-    response.json({
-      success: true,
-      message: "User deleted successfully",
-    });
-  } catch (error) {
-    response.status(444).json({
-      success: false,
-      error: error,
-    });
-  }
-};

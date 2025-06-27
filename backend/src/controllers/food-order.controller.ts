@@ -6,7 +6,7 @@ export const getAllFoodOrders = async (
   response: Response
 ) => {
   try {
-    const foodOrder = await FoodOrder.find();
+    const foodOrder = await FoodOrder.find().populate("user");
     response.json({
       success: true,
       data: foodOrder,
